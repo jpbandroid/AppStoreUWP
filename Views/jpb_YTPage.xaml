@@ -1,0 +1,24 @@
+﻿<Page xmlns:my="using:Microsoft.Toolkit.Uwp.UI.Controls" 
+    x:Class="AppStore.Views.jpb_YTPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <!--
+                The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.
+            -->
+            <Button Style="{StaticResource AccentButtonStyle}" Content="Subscribe!" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Top" Click="subscribe" />
+            <Button Content="Android 12 Easter Egg on Fire Tablets - sort of..." HorizontalAlignment="Stretch" Margin="0,83,0,0" VerticalAlignment="Top" Click="a12easteregg"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,47,0,0" Text="Watch jpb videos offline!" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Button Content="More Android Easter Eggs..." HorizontalAlignment="Stretch" Margin="0,120,0,0" VerticalAlignment="Top" Click="maee"/>
+            <Button Content="Android Easter Eggs (Enchanced Edition)" HorizontalAlignment="Stretch" Margin="0,157,0,0" VerticalAlignment="Top" Click="eeenchance"/>
+            <Button Content="Windows 11 build 22463 walkthrough" HorizontalAlignment="Stretch" Margin="0,194,0,0" VerticalAlignment="Top" Click="win11walk"/>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="AppStore.Views.MyApp_UWP_LTSCPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Microsoft.Toolkit.Uwp.UI" xmlns:Custom1="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <Image HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"  Source="/Assets/myappuwpBIG.png" Stretch="None"/>
+            <StackPanel Margin="215,10,0,0">
+                <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" Text="MyApp UWP LTSC" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="48"/>
+                <HyperlinkButton Content="jpb" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" NavigateUri="/Views/jpb_AppsPage.xaml" Click="hyperlinkclick"/>
+                <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" Text="15 July 2021" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            </StackPanel>
+            <StackPanel Margin="10,215,10,0">
+                <Custom1:Expander
+     IsExpanded="False"
+     ExpandDirection="Down"
+     VerticalAlignment="Top"
+     Header="Screenshots"
+     Content="No screenshots yet!"></Custom1:Expander>
+                <TextBlock Text="version 1.1" FontSize="16" FontWeight="Light" />
+                <Button Style="{StaticResource AccentButtonStyle}" Content="Download" />
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Right" Margin="0,251,0,0" Text="3 MB" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+
+            <!--
+                The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.
+            -->
+        </Grid>
+    </Grid>
+</Page>
