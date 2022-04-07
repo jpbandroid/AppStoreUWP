@@ -32,14 +32,21 @@
                         <Image x:Name="AppFontIcon"
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Center"
-                    Source="Assets/Square44x44Logo.png" 
+                    Source="ms-appx:///Assets/Square44x44Logo.png" 
                     Width="16" 
                     Height="16"/>
                         <TextBlock x:Name="AppTitle"
-                    Text="Test App Title"
+                    Text="jpb App Store"
                     VerticalAlignment="Center"
                     Margin="12,0,0,0"
                     Style="{StaticResource CaptionTextBlockStyle}" />
+                        <TextBlock x:Name="PreviewBlock"
+                               Text="PREVIEW"
+                               VerticalAlignment="Center"
+                               Margin="12,2,0,0"
+                               Style="{StaticResource CaptionTextBlockStyle}"
+                            RequestedTheme="Light" Opacity="0.5"
+                           Visibility="Visible"/>
                     </StackPanel>
                 </Border>
             </Grid>
