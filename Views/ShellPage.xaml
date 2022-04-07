@@ -8,52 +8,110 @@
     xmlns:behaviors="using:AppStore.Behaviors"
     xmlns:winui="using:Microsoft.UI.Xaml.Controls"
     xmlns:helpers="using:AppStore.Helpers"
-    xmlns:views="using:AppStore.Views"
+    xmlns:views="using:AppStore.Views" xmlns:winui1="using:Windows.UI.Xaml.Controls"
     Loaded="OnLoaded"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    winui:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
-    <winui:NavigationView
+    <Page.Resources>
+        <!--This top margin is the height of the custom TitleBar-->
+        <Thickness x:Key="NavigationViewContentMargin">0,48,0,0</Thickness>
+    </Page.Resources>
+
+    <Grid>
+        <Grid>
+            <Grid>
+                <Border x:Name="AppTitleBar"
+                IsHitTestVisible="True"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Height="48"
+                Canvas.ZIndex="1" 
+                Margin="48,8,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Image x:Name="AppFontIcon"
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center"
+                    Source="Assets/Square44x44Logo.png" 
+                    Width="16" 
+                    Height="16"/>
+                        <TextBlock x:Name="AppTitle"
+                    Text="Test App Title"
+                    VerticalAlignment="Center"
+                    Margin="12,0,0,0"
+                    Style="{StaticResource CaptionTextBlockStyle}" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
+        <AutoSuggestBox QueryIcon="Find"
+                                x:Name="searchBox"
+                                AllowFocusOnInteraction="True"
+                    PlaceholderText="Search apps, games, and more"
+                    HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                    Width="260" Height="32"
+                        Canvas.ZIndex="2"
+                        TextChanged="AutoSuggestBox_TextChanged"
+                SuggestionChosen="AutoSuggestBox_SuggestionChosen"
+/>
+        <winui1:Button
+                                x:Name="aboutbutton"
+                                AllowFocusOnInteraction="True"
+                    HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Canvas.ZIndex="3"
+            
+            
+/>
+        <winui:NavigationView
         x:Name="navigationView"
         IsBackButtonVisible="Visible"
         IsBackEnabled="{x:Bind IsBackEnabled, Mode=OneWay}"
         SelectedItem="{x:Bind Selected, Mode=OneWay}"
         ItemInvoked="OnItemInvoked"
         IsSettingsVisible="True"
-        Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-        <winui:NavigationView.MenuItems>
-            <!--
+        Background="Transparent"
+        AlwaysShowHeader="False"
+        IsTitleBarAutoPaddingEnabled="False">
+            <winui:NavigationView.MenuItems>
+                <!--
             TODO WTS: Change the symbols for each item as appropriate for your app
             More on Segoe UI Symbol icons: https://docs.microsoft.com/windows/uwp/style/segoe-ui-symbol-font
             Or to use an IconElement instead of a Symbol see https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/projectTypes/navigationpane.md
             Edit String/en-US/Resources.resw: Add a menu item title for each page
             -->
-            <winui:NavigationViewItem x:Uid="Shell_Home" Icon="Home" helpers:NavHelper.NavigateTo="views:HomePage" />
-            <winui:NavigationViewItem x:Uid="Shell_Apps" Icon="AllApps" helpers:NavHelper.NavigateTo="views:AppsPage" />
-            <winui:NavigationViewItem x:Uid="Shell_Games" helpers:NavHelper.NavigateTo="views:GamesPage" >
-                <winui:NavigationViewItem.Icon>
-                    <FontIcon Glyph="&#xE7FC;" FontFamily="Segoe MDL2 Assets"/>
-                </winui:NavigationViewItem.Icon>
-            </winui:NavigationViewItem>
-            <winui:NavigationViewItem x:Uid="Shell_jpb_YT" helpers:NavHelper.NavigateTo="views:jpb_YTPage" Content="jpb YouTube channel" >
-                <winui:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="/Assets/youtube.png"/>
-                </winui:NavigationViewItem.Icon>
-            </winui:NavigationViewItem>
-        </winui:NavigationView.MenuItems>
-        <i:Interaction.Behaviors>
-            <behaviors:NavigationViewHeaderBehavior
+                <winui:NavigationViewItem x:Uid="Shell_Home" Icon="Home" helpers:NavHelper.NavigateTo="views:HomePage" />
+                <winui:NavigationViewItem x:Uid="Shell_Apps" Icon="AllApps" helpers:NavHelper.NavigateTo="views:AppsPage" />
+                <winui:NavigationViewItem x:Uid="Shell_Games" helpers:NavHelper.NavigateTo="views:GamesPage" >
+                    <winui:NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7FC;" FontFamily="Segoe MDL2 Assets"/>
+                    </winui:NavigationViewItem.Icon>
+                </winui:NavigationViewItem>
+                <winui:NavigationViewItem x:Uid="Shell_jpb_YT" helpers:NavHelper.NavigateTo="views:jpb_YTPage" Content="jpb YouTube channel" >
+                    <winui:NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/youtube.png"/>
+                    </winui:NavigationViewItem.Icon>
+                </winui:NavigationViewItem>
+            </winui:NavigationView.MenuItems>
+            <i:Interaction.Behaviors>
+                <behaviors:NavigationViewHeaderBehavior
                 DefaultHeader="{x:Bind Selected.Content, Mode=OneWay}">
-                <behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            
-                        </Grid>
-                    </DataTemplate>
-                </behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
-            </behaviors:NavigationViewHeaderBehavior>
-        </i:Interaction.Behaviors>
-        <Grid>
-            <Frame x:Name="shellFrame" />
-        </Grid>
-    </winui:NavigationView>
+                    <behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBlock
+                                Text="{Binding}"
+                                Style="{ThemeResource TitleTextBlockStyle}"
+                                Margin="{StaticResource SmallLeftRightMargin}" />
+                            </Grid>
+                        </DataTemplate>
+                    </behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
+                </behaviors:NavigationViewHeaderBehavior>
+            </i:Interaction.Behaviors>
+            <Grid>
+                <Frame x:Name="shellFrame" />
+            </Grid>
+        </winui:NavigationView>
+    </Grid>
 </Page>
