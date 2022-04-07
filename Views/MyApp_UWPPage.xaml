@@ -18,12 +18,12 @@
                 <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" Text="28 September 2021" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
             </StackPanel>
             <StackPanel Margin="10,215,10,0">
-                <Custom:Expander
+                <muxc:Expander
      IsExpanded="False"
      ExpandDirection="Down"
      VerticalAlignment="Top"
      Header="Screenshots"
-     Content="No screenshots yet!"></Custom:Expander>
+     Content="No screenshots yet!"></muxc:Expander>
                 <TextBlock Text="version 2.1" FontSize="16" FontWeight="Light" />
                 <Button Style="{StaticResource AccentButtonStyle}" Content="Download" Click="download" />
             </StackPanel>
