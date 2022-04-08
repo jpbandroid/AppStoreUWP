@@ -56,11 +56,12 @@
                                 AllowFocusOnInteraction="True"
                     PlaceholderText="Search apps, games, and more"
                     HorizontalAlignment="Center"
+                        Padding="10,0,0,0"
                         VerticalAlignment="Top"
                     Width="260" Height="32"
                         Canvas.ZIndex="2"
                         TextChanged="AutoSuggestBox_TextChanged"
-                SuggestionChosen="AutoSuggestBox_SuggestionChosen"
+                SuggestionChosen="AutoSuggestBox_SuggestionChosen" Margin="0,10,0,0"
 />
         <winui1:Button
                                 x:Name="aboutbutton"
@@ -68,9 +69,11 @@
                     HorizontalAlignment="Right"
                         VerticalAlignment="Top"
                         Canvas.ZIndex="3"
-            
-            
-/>
+            MaxHeight="36"
+            MaxWidth="36"
+             Margin="10,0,130,0">
+            <Image Source="ms-appx:///Assets/ic_fluent_info_24_filled.png"/>
+        </winui1:Button>
         <winui:NavigationView
         x:Name="navigationView"
         IsBackButtonVisible="Visible"
