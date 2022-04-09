@@ -84,6 +84,11 @@ namespace AppStore.Views
             OnPropertyChanged(propertyName);
         }
 
+        private void InfoClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(About));
+        }
+
         private void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

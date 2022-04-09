@@ -62,6 +62,20 @@
                     Style="{ThemeResource BodyTextBlockStyle}" />
 
                 <HyperlinkButton x:Uid="Settings_PrivacyTermsLink" Margin="{StaticResource XSmallTopMargin}" />
+                <Button
+                                x:Name="aboutbutton"
+                                AllowFocusOnInteraction="True"
+                    HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+            MaxHeight="36"
+            MaxWidth="128"
+             Margin="0,0,0,0"
+            Click="InfoClick">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="ms-appx:///Assets/ic_fluent_info_24_filled.png"/>
+                        <TextBlock Text="About" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </StackPanel>
     </Grid>

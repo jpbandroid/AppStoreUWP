@@ -68,7 +68,6 @@ namespace AppStore.Views
             Window.Current.SetTitleBar(AppTitleBar);
             if (Windows.Foundation.Metadata.ApiInformation.IsPropertyPresent("Windows.UI.Xaml.FrameworkElement", "AllowFocusOnInteraction"))
                 searchBox.AllowFocusOnInteraction = true;
-                aboutbutton.AllowFocusOnInteraction = true;
 
             // Register a handler for when the size of the overlaid caption control changes.
             // For example, when the app moves to a screen with a different DPI.
