@@ -24,7 +24,7 @@
      Header="Screenshots"
      Content="No screenshots yet!"></muxc:Expander>
                 <TextBlock Text="version 1.1" FontSize="16" FontWeight="Light" />
-                <Button Style="{StaticResource AccentButtonStyle}" Content="Download" />
+                <Button Style="{StaticResource AccentButtonStyle}" Content="Download" Click="download" />
             </StackPanel>
             <TextBlock HorizontalAlignment="Right" Margin="0,251,0,0" Text="3 MB" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
 
