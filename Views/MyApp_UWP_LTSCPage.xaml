@@ -14,7 +14,7 @@
             <StackPanel Margin="215,10,0,0">
                 <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" Text="MyApp UWP LTSC" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="48"/>
                 <HyperlinkButton Content="jpb" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" NavigateUri="/Views/jpb_AppsPage.xaml" Click="hyperlinkclick"/>
-                <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" Text="15 July 2021" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+                <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" Text="9 February 2022" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
             </StackPanel>
             <StackPanel Margin="10,215,10,0">
                 <muxc:Expander
@@ -23,10 +23,10 @@
      VerticalAlignment="Top"
      Header="Screenshots"
      Content="No screenshots yet!"></muxc:Expander>
-                <TextBlock Text="version 1.1" FontSize="16" FontWeight="Light" />
+                <TextBlock Text="version 1.3" FontSize="16" FontWeight="Light" />
                 <Button Style="{StaticResource AccentButtonStyle}" Content="Download" Click="download" />
             </StackPanel>
-            <TextBlock HorizontalAlignment="Right" Margin="0,251,0,0" Text="3 MB" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Right" Margin="0,251,0,0" Text="6.92 MB" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
 
             <!--
                 The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
