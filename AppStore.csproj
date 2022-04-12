@@ -241,6 +241,9 @@
     <Compile Include="Views\SnipSketchPage.xaml.cs">
       <DependentUpon>SnipSketchPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UTEUWPPage.xaml.cs">
+      <DependentUpon>UTEUWPPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Windows11WalkthroughPage.xaml.cs">
       <DependentUpon>Windows11WalkthroughPage.xaml</DependentUpon>
     </Compile>
@@ -378,6 +381,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\UTEUWPPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Windows11WalkthroughPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -449,6 +456,8 @@
     <Content Include="Assets\StoreLogo.scale-150.png" />
     <Content Include="Assets\StoreLogo.scale-200.png" />
     <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\UTEbig.png" />
+    <Content Include="Assets\UTEsmall.png" />
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />

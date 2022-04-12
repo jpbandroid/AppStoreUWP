@@ -33,6 +33,12 @@
                         <TextBlock Text="MyApp" FontWeight="SemiBold" />
                     </StackPanel>
                 </Button>
+                <Button VerticalAlignment="Top" Click="uteuwp">
+                    <StackPanel>
+                        <Image Source="/Assets/UTEsmall.png" Stretch="None" />
+                        <TextBlock Text="UltraTextEdit UWP" FontWeight="SemiBold" />
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </Grid>
     </Grid>

@@ -125,6 +125,9 @@ namespace AppStore.Views
                 } else if (chosen == "MyApp")
                 {
                     shellFrame.Navigate(typeof(MyAppPage));
+                } else if (chosen == "UltraTextEdit UWP")
+                {
+                    shellFrame.Navigate(typeof(UTEUWPPage));
                 }
             }
         }

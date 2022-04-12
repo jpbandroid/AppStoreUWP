@@ -41,5 +41,10 @@ namespace AppStore.Views
         {
             this.Frame.Navigate(typeof(MyAppPage));
         }
+
+        private void uteuwp(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UTEUWPPage));
+        }
     }
 }
