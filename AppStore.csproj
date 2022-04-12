@@ -181,12 +181,6 @@
     <Compile Include="Views\ChannelSubscribePage.xaml.cs">
       <DependentUpon>ChannelSubscribePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ContentGridDetailPage.xaml.cs">
-      <DependentUpon>ContentGridDetailPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ContentGridPage.xaml.cs">
-      <DependentUpon>ContentGridPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\GamesPage.xaml.cs">
       <DependentUpon>GamesPage.xaml</DependentUpon>
     </Compile>
@@ -210,9 +204,6 @@
     </Compile>
     <Compile Include="Views\MyAppPage.xaml.cs">
       <DependentUpon>MyAppPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MyAppUWPDownload.xaml.cs">
-      <DependentUpon>MyAppUWPDownload.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MyApp_UWPPage.xaml.cs">
       <DependentUpon>MyApp_UWPPage.xaml</DependentUpon>
@@ -301,14 +292,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\ContentGridDetailPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\ContentGridPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\GamesPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -340,10 +323,6 @@
     <Page Include="Views\MyAppPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\MyAppUWPDownload.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MyApp_UWPPage.xaml">
       <Generator>MSBuild:Compile</Generator>
