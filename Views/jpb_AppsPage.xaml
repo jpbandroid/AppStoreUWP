@@ -9,22 +9,31 @@
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
         <Grid
             Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <Button Margin="10,62,0,0" VerticalAlignment="Top" Click="myappuwp">
-                <StackPanel>
-                    <Image Source="/Assets/myappuwpSMALL.png" Stretch="None" />
-                    <TextBlock Text="MyApp UWP" FontWeight="SemiBold" />
-                </StackPanel>
-            </Button>
-            <!--
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Button VerticalAlignment="Top" Click="myappuwp">
+                    <StackPanel>
+                        <Image Source="/Assets/myappuwpSMALL.png" Stretch="None" />
+                        <TextBlock Text="MyApp UWP" FontWeight="SemiBold" />
+                    </StackPanel>
+                </Button>
+                <!--
                 The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.
             -->
-        </Grid>
-        <Button Margin="136,62,0,0" VerticalAlignment="Top" Click="myappuwpltsc">
-            <StackPanel>
-                <Image Source="/Assets/myappuwpSMALL.png" Stretch="None" />
-                <TextBlock Text="MyApp UWP LTSC" FontWeight="SemiBold" />
+
+                <Button VerticalAlignment="Top" Click="myappuwpltsc">
+                    <StackPanel>
+                        <Image Source="/Assets/myappuwpSMALL.png" Stretch="None" />
+                        <TextBlock Text="MyApp UWP LTSC" FontWeight="SemiBold" />
+                    </StackPanel>
+                </Button>
+                <Button VerticalAlignment="Top" Click="myapp">
+                    <StackPanel>
+                        <Image Source="/Assets/myappuwpSMALL.png" Stretch="None" />
+                        <TextBlock Text="MyApp" FontWeight="SemiBold" />
+                    </StackPanel>
+                </Button>
             </StackPanel>
-        </Button>
+        </Grid>
     </Grid>
 </Page>

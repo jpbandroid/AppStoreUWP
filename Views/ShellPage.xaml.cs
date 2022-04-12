@@ -29,6 +29,7 @@ namespace AppStore.Views
     {
         private readonly List<string> Apps = new List<string>()
         {
+            "MyApp",
             "MyApp UWP",
             "MyApp UWP LTSC",
             "UltraTextEdit UWP"
@@ -121,6 +122,9 @@ namespace AppStore.Views
                 } else if (chosen == "MyApp UWP LTSC")
                 {
                     shellFrame.Navigate(typeof(MyApp_UWP_LTSCPage));
+                } else if (chosen == "MyApp")
+                {
+                    shellFrame.Navigate(typeof(MyAppPage));
                 }
             }
         }
