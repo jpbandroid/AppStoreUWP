@@ -8,7 +8,7 @@
   IgnorableNamespaces="uap mp genTemplate">
 
   <Identity
-    Name="2ED96435-92A8-4AEF-AAB7-D31C97BB7C1E"
+    Name="JPB.AppStore"
     Publisher="CN=jpb"
     Version="11.22000.100.0" />
 
