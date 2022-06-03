@@ -92,15 +92,15 @@ namespace AppStore.Views
             {
                 var suitableItems = new List<string>();
                 var splitText = sender.Text.ToLower().Split(" ");
-                foreach (var cat in Apps)
+                foreach (var app in Apps)
                 {
                     var found = splitText.All((key) =>
                     {
-                        return cat.ToLower().Contains(key);
+                        return app.ToLower().Contains(key);
                     });
                     if (found)
                     {
-                        suitableItems.Add(cat);
+                        suitableItems.Add(app);
                     }
                 }
                 if (suitableItems.Count == 0)
