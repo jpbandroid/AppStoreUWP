@@ -55,7 +55,7 @@ namespace AppStore.Views
         {
             try
             {
-                var myappuri = new Uri("https://occoam.com/jpb/wp-content/uploads/UTEUWP_1.0.19044.194.zip");
+                var myappuri = new Uri("https://occoam.com/jpb/wp-content/uploads/UTEUWP_1.0.19044.493.zip");
                 BackgroundDownloader downloader = new BackgroundDownloader();
                 Uri source = myappuri;
                 FolderPicker picker = new FolderPicker { SuggestedStartLocation = PickerLocationId.Downloads };
