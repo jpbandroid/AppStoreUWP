@@ -10,7 +10,7 @@
   <Identity
     Name="JPB.AppStore"
     Publisher="CN=jpb"
-    Version="11.22000.100.0" />
+    Version="11.22000.120.0" />
 
   <mp:PhoneIdentity PhoneProductId="2ED96435-92A8-4AEF-AAB7-D31C97BB7C1E" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

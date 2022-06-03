@@ -16,7 +16,7 @@
 
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Height="200" Width="Auto">
-            <Image Height="100" Width="100" Source="ms-appx:///Assets/Square44x44Logo.scale-400.png"/>
+            <Image Height="100" Width="100" Source="ms-appx:///Assets/AppStoreIcon.png"/>
             <TextBlock Text="jpb App Store" FontFamily="Segoe UI" FontSize="36" FontWeight="SemiBold" Height="51"/>
             <TextBlock Text="PREVIEW" FontFamily="Segoe UI Semibold" FontSize="18" Height="51" Visibility="Collapsed"/>
         </StackPanel>
