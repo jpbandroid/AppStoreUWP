@@ -39,30 +39,32 @@
                 <TextBlock Text="jpb" FontSize="18"/>
             </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Vertical" Margin="40,216,0,0" ScrollViewer.IsVerticalRailEnabled="True" ScrollViewer.IsHorizontalRailEnabled="True" Width="Auto" Height="Auto">
-            <Border Width="600" Height="Auto" Background="{ThemeResource LayerFillColorDefaultBrush}"
+        <RelativePanel Margin="40,216,0,0" ScrollViewer.IsVerticalRailEnabled="True" ScrollViewer.IsHorizontalRailEnabled="True" Width="Auto" Height="Auto">
+            <ScrollViewer>
+                <RelativePanel>
+                    <Border x:Name="github"  Width="600" Height="Auto" Background="{ThemeResource LayerFillColorDefaultBrush}"
                                 VerticalAlignment="Top" 
                                 HorizontalAlignment="Left" 
                                 Margin="16"
                                 CornerRadius="8"
                                 BorderThickness="1"
                                 BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
-                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Height="Auto" Width="Auto" Margin="16">
-                    <TextBlock FontWeight="SemiBold" FontSize="24">GitHub Repository</TextBlock>
-                    <TextBlock  FontSize="12" Text="Go to the GitHub repository to browse the code, submit Issues (for bug tracking and feature requests), download the latest version of the app store, and much more!" TextWrapping="Wrap"/>
-                    <HyperlinkButton Content="AppStore GitHub repo" NavigateUri="https://github.com/jpbandroid/AppStore"/>
-                </StackPanel>
-            </Border>
-            <Border Width="600" Height="Auto" Background="{ThemeResource LayerFillColorDefaultBrush}"
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Height="Auto" Width="Auto" Margin="16">
+                            <TextBlock FontWeight="SemiBold" FontSize="24">GitHub Repository</TextBlock>
+                            <TextBlock  FontSize="12" Text="Go to the GitHub repository to browse the code, submit Issues (for bug tracking and feature requests), download the latest version of the app store, and much more!" TextWrapping="Wrap"/>
+                            <HyperlinkButton Content="AppStore GitHub repo" NavigateUri="https://github.com/jpbandroid/AppStore"/>
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="license" RelativePanel.Below="github" Width="600" Height="Auto" Background="{ThemeResource LayerFillColorDefaultBrush}"
                                 VerticalAlignment="Top" 
                                 HorizontalAlignment="Left" 
                                 Margin="16" 
                                 CornerRadius="8"
                                 BorderThickness="1"
                                 BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
-                <StackPanel Height="Auto" Width="Auto" Margin="16">
-                    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="24" FontWeight="SemiBold">App License</TextBlock>
-                    <TextBlock 
+                        <StackPanel Height="Auto" Width="Auto" Margin="16">
+                            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="24" FontWeight="SemiBold">App License</TextBlock>
+                            <TextBlock 
 						TextWrapping="WrapWholeWords"
                         Name="LicensingText"
                         x:Uid="Trademark" Text="
@@ -91,8 +93,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."/>
-                </StackPanel>
-            </Border>
-        </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </RelativePanel>
+            </ScrollViewer>
+        </RelativePanel>
     </Grid>
 </Page>
